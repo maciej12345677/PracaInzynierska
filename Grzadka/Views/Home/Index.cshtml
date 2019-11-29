@@ -1,0 +1,133 @@
+﻿@model Grzadka.ViewModels.HomeViewModel
+
+
+@{
+    ViewBag.Title = "Witaj";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Content/Site-prototype.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <nav class="genres-horizontal">
+        <ul>
+            @foreach (var category in Model.Categories)
+            {
+                <li>
+                    <a href="@Url.Action("List", "Store", new { categoryname = category.Name.ToLower() })"
+                        style="background-image: url(@Url.CategoryIconPath(category.IconFileName)); ">
+                        @category.Name  
+                    </a>
+                </li>
+            }
+        </ul>
+        <a href="">
+            <img id="baner-main" src="../Content/Images/separator.png"  />
+        </a>
+        <a href="">
+            <img id="baner-main" src="../Content/Images/baner-mainn.png" />
+        </a>
+    </nav>
+    <section>
+        <ul class="ThreeColumnsCoversList large-cover-list">
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="newFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/Adenium opasłe _Róża Pustyni_.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="newFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/Aeschynanthus _Mona Lisa_.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="newFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/Alocasia _Polly_ Alokazja.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <ul class="ThreeColumnsCoversList large-cover-list">
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="bestsellerFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/aloes.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="bestsellerFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/bananowiec.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <a class="addtocartlink" href="aaaa">
+                        <img src="../Content/Images/cart.png" />
+                    </a>
+                    <a class="productdetailslink" href="asd">
+                        <div class="bestsellerFlag"></div>
+                        <img class="album-cover" src="../Content/Covers/Begonia koralowa kopia.jpg" />
+                        <h1>
+                            Testowy obrazek
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+
+
+</body>
+</html>
